@@ -1,35 +1,15 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
-function App() {
-  const [count, setCount] = useState(0)
-
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="tix-min-h-screen tix-w-full tix-bg-gradient-to-r tix-from-indigo-500 tix-via-purple-500 tix-to-pink-500 tix-flex tix-items-center tix-justify-center">
+      <div className="tix-bg-white/20 tix-w-full tix-backdrop-blur-md tix-rounded-2xl tix-shadow-2xl tix-p-10 tix-text-center tix-text-white">
+        <h1 className="tix-text-4xl tix-font-extrabold tix-mb-4 tix-drop-shadow-lg tix-w-full">
+           Tailwind CSS + React 19 + Vite + Prefix
+        </h1>
+
+        <button className="tix-px-6 tix-py-3 tix-bg-white tix-text-indigo-600 tix-font-semibold tix-rounded-xl tix-hover:bg-indigo-100 tix-transition tix-duration-300 tix-shadow-md">
+          TEST BTN
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
-
-export default App
