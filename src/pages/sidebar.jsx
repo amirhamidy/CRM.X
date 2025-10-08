@@ -17,17 +17,17 @@ export default function Sidebar() {
   return (
     <aside
       className={clsx(
-        "tix-h-screen tix-flex tix-flex-col tix-border-r tix-border-border tix-bg-background tix-transition-all tix-duration-500",
+        "tix-h-screen tix-flex tix-flex-col tix-border-r tix-border-border tix-bg-background !tix-transition-all !tix-duration-300",
         collapsed ? "tix-w-20" : "tix-w-64"
       )}
     >
-      <div className="tix-flex tix-items-center tix-justify-between tix-px-4 tix-py-3 tix-border-b tix-border-border tix-duration-500">
+      <div className={clsx ("tix-flex tix-items-center tix-justify-between tix-px-4 tix-py-3 tix-border-b tix-border-border tix-duration-500" , collapsed ? "!tix-justify-center" : "" )}>
         <span className={clsx("tix-font-semibold tix-text-lg tix-text-foreground", collapsed && "tix-hidden")}>
           CRM.X
         </span>
         <button
           onClick={() => setCollapsed(!collapsed)}
-          className= {` tix-p-2 tix-rounded-md tix-text-muted-foreground hover:tix-bg-muted  hover:tix-text-foreground tix-transition-colors ${ collapsed ? "" : " tix-justify-center"}`}
+          className= {` tix-p-2 tix-rounded-md tix-text-muted-foreground hover:tix-bg-muted tix-duration-200 hover:tix-bg-gray-200 hover:tix-text-foreground tix-transition-colors ${ collapsed ? "!tix-px-3 !tix-py-2" : ""}`}
         >
           <Menu size={18} />
         </button>
@@ -54,7 +54,7 @@ export default function Sidebar() {
       </nav>
 
       <div className="tix-p-3 tix-border-t tix-border-border">
-        <button className="tix-flex tix-items-center tix-duration-200 tix-transition-colors hover:tix-bg-gray-200 tix-gap-3 tix-w-full tix-rounded-md tix-px-3 tix-py-2 tix-text-sm tix-text-muted-foreground hover:tix-bg-muted hover:tix-text-foreground tix-transition-colors">
+        <button className="tix-flex tix-items-center tix-duration-200 hover:tix-bg-gray-200 tix-gap-3 tix-w-full tix-rounded-md tix-px-3 tix-py-2 tix-text-sm tix-text-muted-foreground hover:tix-bg-muted hover:tix-text-foreground tix-transition-colors">
           <LogOut size={18} />
           {!collapsed && <span>Logout</span>}
         </button>
