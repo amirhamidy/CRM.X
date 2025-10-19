@@ -8,6 +8,13 @@ const navItems = [
   { label: "Dashboard", icon: Home },
   { label: "Profile", icon: User },
   { label: "Settings", icon: Settings },
+   { label: "Dashboard", icon: Home },
+  { label: "Profile", icon: User },
+  { label: "Settings", icon: Settings },
+   { label: "Dashboard", icon: Home },
+  { label: "Profile", icon: User },
+  { label: "Settings", icon: Settings },
+  
 ];
 
 export default function Sidebar() {
